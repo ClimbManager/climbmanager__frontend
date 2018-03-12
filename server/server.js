@@ -1,3 +1,4 @@
+require('dotenv').config();
 const path = require('path');
 const express = require('express');
 
@@ -5,7 +6,7 @@ const app = express();
 const webpackDevHelper = require('./server.dev');
 
 const isDev = process.env.NODE_ENV !== 'production';
-const port = '5555';
+const port = process.env.PORT || 8080;
 
 if (isDev) {
     webpackDevHelper.useWebpackMiddleware(app);
