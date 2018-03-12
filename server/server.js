@@ -5,7 +5,8 @@ const app = express();
 const webpackDevHelper = require('./server.dev');
 
 const isDev = process.env.NODE_ENV !== 'production';
-const port = process.env.CLIMBMAN_PORT || '5555';
+const port = process.env.CLIMBMAN_PORT || '9999';
+console.log('process.env.CLIMBMAN_PORT ', process.env.CLIMBMAN_PORT );
 
 if (isDev) {
     webpackDevHelper.useWebpackMiddleware(app);
