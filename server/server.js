@@ -7,7 +7,6 @@ const webpackDevHelper = require('./server.dev');
 
 const isDev = process.env.NODE_ENV !== 'production';
 const port = process.env.PORT || 8080;
-console.log('process.env.PORT ', process.env.CLIMBMAN_PORT );
 
 if (isDev) {
     webpackDevHelper.useWebpackMiddleware(app);
